@@ -25,8 +25,6 @@ RUN chmod 750 /init.sh
 # Define container settings.
 #
 
-VOLUME ["/etc/bind", "/var/log/named"]
-
 EXPOSE 53/udp
 
 WORKDIR /etc/bind
