@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM alpine:latest
 
 MAINTAINER pstauffer@confirm.ch
 
@@ -16,6 +16,8 @@ RUN apk --update upgrade && \
 #
 
 ADD init.sh /init.sh
+ADD bindconfig/named.conf /etc/bind/named.conf
+ADD bindconfig/wrongt.o.zone /etc/bind/wrongt.o.zone
 RUN chmod 750 /init.sh
 
 

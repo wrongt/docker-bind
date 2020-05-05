@@ -4,29 +4,16 @@
 
 This docker image provides a [bind service](https://www.isc.org/downloads/bind/) based on [Alpine Linux](https://hub.docker.com/_/alpine/).
 
-[![](https://images.microbadger.com/badges/image/pstauffer/bind.svg)](https://microbadger.com/images/pstauffer/bind)
-
 ## Usage
 
-If you like to use this image, please use a specific version tag like `v1.0.0` or the branches `latest`, `stable`. The other branches are only temporary and will be deleted after the merge into the other branches.
-
-There are two options to start your Bind container.
+Option to start Bind container.
 
 ### Docker Run
 
 Use this docker command to run the bind container.
 ```
 docker run -d --name bind --publish 53:53/udp \
--v /bindconfig:/etc/bind -v /bindlog:/var/log/named \
---restart=always pstauffer/bind:stable
-```
-
-
-### docker-compose
-
-Check out the `docker-compose.yml` file in the [git repo](https://raw.githubusercontent.com/pstauffer/docker-bind/master/docker-compose.yml).
-```
-docker-compose up -d
+--restart=always wrongt/bind:latest
 ```
 
 ### Docker Environment Variables
