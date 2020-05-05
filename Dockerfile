@@ -19,6 +19,8 @@ ADD init.sh /init.sh
 ADD bindconfig/named.conf /etc/bind/named.conf
 ADD bindconfig/wrongt.o.zone /etc/bind/wrongt.o.zone
 RUN chmod 750 /init.sh
+RUN mkdir -p /var/log/named
+RUN mkdir -p /var/run/named
 
 
 #
